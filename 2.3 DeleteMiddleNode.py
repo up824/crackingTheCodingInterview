@@ -1,6 +1,6 @@
 # 2.3 delete a given middle node(not first or last)
 class ListNode(object):
-    def __init__(val):
+    def __init__(self, val):
         self.val = val
         self.next = None
 
