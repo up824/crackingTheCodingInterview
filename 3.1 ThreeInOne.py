@@ -14,7 +14,7 @@ class Stack3(object):
 
     def pop(self, stackIdx):
         try:
-            res = self.peak(stackIdx):
+            res = self.peak(stackIdx)
         except:
             raise IndexError("can't pop item, stack is empty")
         self.idx[stackIdx] -= 3
@@ -30,3 +30,20 @@ class Stack3(object):
         if self.isEmpty(stackIdx):
             raise IndexError("can't peak item, stack is empty")
         return self.arr[self.idx[stackIdx]]
+
+# test
+import unittest
+class Test(unittest.TestCase):
+    def test_stack3(self):
+        stack3 = Stack3()
+        for i in xrange(100):
+            stack3.push(i, 0)
+        for i in xrange(99, -1, -1):
+            self.assertEqual(stack3.pop(0), i)
+        for i in xrange(1000):
+            stack3.push(i, i % 3)
+        for i in xrange(1000 - 1, -1, -1):
+            self.assertEqual(stack3.pop(i % 3), i)
+
+if __name__ == "__main__":
+    unittest.main()
