@@ -24,3 +24,19 @@ def sumList(a, b):
         head = head.next
 
     return dummy.next
+
+def sumList2(a, b):
+    a = reverse(a)
+    b = reverse(b)
+    res = sumList(a, b)
+    res = reverse(res)
+    return res
+
+def reverse(head):
+    if not head:
+        return head
+
+    prev = None
+    while head:
+        head.next, head, prev = prev, head.next, head
+    return prev
