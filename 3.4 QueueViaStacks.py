@@ -1,4 +1,5 @@
 # 3.4 build a queue with 2 stacks
+# practice
 class Queue(object):
     def __init__(self):
         self.stacks = [Stack(), Stack()]
