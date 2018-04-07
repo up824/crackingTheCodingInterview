@@ -1,4 +1,4 @@
-# 4.3 Minimal Tree
+# 4.2 Minimal Tree
 class TreeNode(object):
     def __init__(self, val):
         self.val = val
