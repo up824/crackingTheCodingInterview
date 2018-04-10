@@ -10,9 +10,8 @@ def successor(root):
     if not root:
         return root
 
-    succ = None
     if root.right:
-        curr = root.right
+        succ = curr = root.right
         while curr:
             if root.val < curr.val:
                 succ = curr
@@ -27,4 +26,4 @@ def successor(root):
             return curr
         curr = curr.parent
 
-    return succ
+    return None
