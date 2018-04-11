@@ -16,4 +16,4 @@ def dfs(root, path, target, res):
         vals = [node.val for node in path]
         res.append(vals)
     if not root:
-        return 
+        return
